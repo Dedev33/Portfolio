@@ -1,10 +1,10 @@
-<!-- ==================== Parte 1: Estrutura Base ==================== -->
+<!-- ==================== Parte 1: Estrutura Base com Typewriter ==================== -->
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>André Dowbor | Portfólio</title>
+    <title>André Dowbor | Marketing & Automações</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
@@ -19,9 +19,28 @@
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
         border-radius: 1rem;
       }
-      a:hover {
-        transition: 0.3s ease;
-        opacity: 0.8;
+      .fade {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease-in-out;
+      }
+      .fade.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @keyframes typewriter {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      .typewriter {
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: .15em solid #00ffcc;
+        animation: typewriter 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+      }
+      @keyframes blink {
+        from, to { border-color: transparent }
+        50% { border-color: #00ffcc }
       }
     </style>
   </head>
@@ -38,22 +57,31 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero com typewriter -->
     <section class="flex flex-col justify-center items-center text-center px-6 py-32" id="inicio">
-      <h2 class="text-4xl font-bold mb-4">Marketing & Automações</h2>
-      <p class="max-w-xl text-gray-300 text-lg">
-        Transformando ideias em soluções automatizadas e estratégias digitais com impacto real.
+      <h2 class="text-4xl font-bold mb-4 typewriter">Marketing & Automações</h2>
+      <p class="max-w-xl text-gray-300 text-lg fade">
+        Transformo ideias em soluções inteligentes. Bots, landing pages, automações e performance de verdade.
       </p>
-      <a href="https://wa.me/5513981213016" target="_blank" class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">
-        Fale comigo no WhatsApp
+      <a href="https://wa.me/5513981213016" target="_blank" class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition duration-300">
+        📱 Fale comigo no WhatsApp
       </a>
     </section>
+
+    <script>
+      // Fade-in simples ao carregar
+      window.addEventListener("load", () => {
+        document.querySelectorAll('.fade').forEach((el, i) => {
+          setTimeout(() => el.classList.add("visible"), i * 300);
+        });
+      });
+    </script>
     <!-- Sobre -->
     <section id="sobre" class="px-6 py-20 bg-transparent">
-      <div class="max-w-4xl mx-auto glass p-8 text-center animate-fade-in">
+      <div class="max-w-4xl mx-auto glass p-8 text-center fade">
         <h3 class="text-2xl font-bold mb-4">Sobre Mim</h3>
         <p class="text-gray-300 text-lg">
-          Sou especialista em Marketing e Automação. Ajudo empresas e profissionais a aumentarem seus resultados através de soluções criativas, bots inteligentes e campanhas digitais eficientes. Estou sempre em busca de inovação e performance.
+          Sou apaixonado por unir tecnologia e estratégia. Com experiência em marketing digital e automações, ajudo negócios a vender mais, escalar atendimentos e ganhar tempo com inteligência.
         </p>
       </div>
     </section>
@@ -61,30 +89,30 @@
     <!-- Projetos -->
     <section id="projetos" class="px-6 py-20 bg-transparent">
       <div class="max-w-6xl mx-auto">
-        <h3 class="text-2xl font-bold mb-10 text-center">Projetos</h3>
+        <h3 class="text-2xl font-bold mb-10 text-center fade">Projetos Recentes</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="glass p-6 animate-fade-in">
-            <h4 class="text-xl font-semibold mb-2">Bot para WhatsApp</h4>
+          <div class="glass p-6 fade hover:scale-105 transition duration-500">
+            <h4 class="text-xl font-semibold mb-2 text-white">🤖 Bot para WhatsApp</h4>
             <p class="text-gray-300">
-              Criação de bots inteligentes para atendimento automático e geração de leads via WhatsApp.
+              Atendimentos automáticos, funil de vendas e agendamento direto no WhatsApp com IA.
             </p>
           </div>
-          <div class="glass p-6 animate-fade-in">
-            <h4 class="text-xl font-semibold mb-2">Landing Pages para Captura</h4>
+          <div class="glass p-6 fade hover:scale-105 transition duration-500">
+            <h4 class="text-xl font-semibold mb-2 text-white">🌐 Landing Page Ultra Rápida</h4>
             <p class="text-gray-300">
-              Desenvolvimento de páginas otimizadas para captação de contatos e conversões, com alta performance.
+              Site de alta conversão com foco em captação de leads e performance no Google.
             </p>
           </div>
-          <div class="glass p-6 animate-fade-in">
-            <h4 class="text-xl font-semibold mb-2">Automação de Instagram</h4>
+          <div class="glass p-6 fade hover:scale-105 transition duration-500">
+            <h4 class="text-xl font-semibold mb-2 text-white">📱 Automação para Instagram</h4>
             <p class="text-gray-300">
-              Agendamentos, respostas automáticas e estratégias para crescimento de perfis comerciais.
+              Gerador de conteúdo automático e respostas com IA para directs e comentários.
             </p>
           </div>
-          <div class="glass p-6 animate-fade-in">
-            <h4 class="text-xl font-semibold mb-2">Sistemas Web sob medida</h4>
+          <div class="glass p-6 fade hover:scale-105 transition duration-500">
+            <h4 class="text-xl font-semibold mb-2 text-white">📊 Dashboard de Resultados</h4>
             <p class="text-gray-300">
-              Criação de sistemas simples para controle financeiro, atendimento ou gestão interna de pequenas empresas.
+              Painel visual com dados de vendas, leads, automações e campanhas em tempo real.
             </p>
           </div>
         </div>
@@ -93,42 +121,48 @@
 
     <!-- Serviços -->
     <section id="servicos" class="px-6 py-20 bg-transparent">
-      <div class="max-w-4xl mx-auto glass p-8 animate-fade-in">
-        <h3 class="text-2xl font-bold mb-6 text-center">Serviços</h3>
+      <div class="max-w-4xl mx-auto glass p-8 text-center fade">
+        <h3 class="text-2xl font-bold mb-6">O que eu faço</h3>
         <ul class="text-gray-300 space-y-4 text-lg">
-          <li>✅ Criação de Chatbots para WhatsApp</li>
-          <li>✅ Landing Pages Profissionais</li>
-          <li>✅ Automações para redes sociais</li>
-          <li>✅ Integrações com n8n, APIs e ferramentas de marketing</li>
-          <li>✅ Consultoria em marketing digital estratégico</li>
+          <li>✅ Criação de bots inteligentes (WhatsApp, Instagram)</li>
+          <li>✅ Landing pages com foco em conversão</li>
+          <li>✅ Automações com n8n e Zapier</li>
+          <li>✅ Integração com APIs e CRMs</li>
+          <li>✅ Estratégia de tráfego e performance</li>
         </ul>
       </div>
     </section>
     <!-- Contato -->
     <section id="contato" class="px-6 py-20 bg-transparent">
-      <div class="max-w-3xl mx-auto glass p-8 text-center animate-fade-in">
+      <div class="max-w-3xl mx-auto glass p-8 text-center fade">
         <h3 class="text-2xl font-bold mb-4">Entre em Contato</h3>
-        <p class="text-gray-300 mb-6">Quer trabalhar comigo ou tirar dúvidas? Me chama no WhatsApp clicando no botão abaixo!</p>
-        <a href="https://wa.me/5513981213016" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full shadow hover:scale-105 transition inline-block">
-          📱 Conversar agora
+        <p class="text-gray-300 mb-6">Vamos conversar sobre seu projeto? Me chame no WhatsApp agora mesmo.</p>
+        <a href="https://wa.me/5513981213016" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full shadow hover:scale-110 transition duration-300 inline-block">
+          📱 Enviar mensagem
         </a>
       </div>
     </section>
 
     <!-- Rodapé -->
-    <footer class="text-center text-gray-500 text-sm py-10 px-4">
+    <footer class="text-center text-gray-500 text-sm py-10 px-4 fade">
       <p>© 2025 André Dowbor. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Animações básicas -->
+    <!-- Animação Scroll Reveal -->
     <script>
-      document.querySelectorAll('.animate-fade-in').forEach((el, i) => {
-        el.style.opacity = 0;
-        setTimeout(() => {
-          el.style.transition = "opacity 1s ease";
-          el.style.opacity = 1;
-        }, i * 300);
+      const fadeEls = document.querySelectorAll('.fade');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
       });
+
+      fadeEls.forEach(el => observer.observe(el));
     </script>
   </body>
 </html>
