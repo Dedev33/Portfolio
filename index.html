@@ -1,0 +1,134 @@
+<!-- ==================== Parte 1: Estrutura Base ==================== -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>André Dowbor | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        border-radius: 1rem;
+      }
+      a:hover {
+        transition: 0.3s ease;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="glass fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-opacity-30">
+      <h1 class="text-2xl font-bold">André Dowbor</h1>
+      <nav class="space-x-6 text-sm md:text-base">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex flex-col justify-center items-center text-center px-6 py-32" id="inicio">
+      <h2 class="text-4xl font-bold mb-4">Marketing & Automações</h2>
+      <p class="max-w-xl text-gray-300 text-lg">
+        Transformando ideias em soluções automatizadas e estratégias digitais com impacto real.
+      </p>
+      <a href="https://wa.me/5513981213016" target="_blank" class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">
+        Fale comigo no WhatsApp
+      </a>
+    </section>
+    <!-- Sobre -->
+    <section id="sobre" class="px-6 py-20 bg-transparent">
+      <div class="max-w-4xl mx-auto glass p-8 text-center animate-fade-in">
+        <h3 class="text-2xl font-bold mb-4">Sobre Mim</h3>
+        <p class="text-gray-300 text-lg">
+          Sou especialista em Marketing e Automação. Ajudo empresas e profissionais a aumentarem seus resultados através de soluções criativas, bots inteligentes e campanhas digitais eficientes. Estou sempre em busca de inovação e performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="px-6 py-20 bg-transparent">
+      <div class="max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-10 text-center">Projetos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="glass p-6 animate-fade-in">
+            <h4 class="text-xl font-semibold mb-2">Bot para WhatsApp</h4>
+            <p class="text-gray-300">
+              Criação de bots inteligentes para atendimento automático e geração de leads via WhatsApp.
+            </p>
+          </div>
+          <div class="glass p-6 animate-fade-in">
+            <h4 class="text-xl font-semibold mb-2">Landing Pages para Captura</h4>
+            <p class="text-gray-300">
+              Desenvolvimento de páginas otimizadas para captação de contatos e conversões, com alta performance.
+            </p>
+          </div>
+          <div class="glass p-6 animate-fade-in">
+            <h4 class="text-xl font-semibold mb-2">Automação de Instagram</h4>
+            <p class="text-gray-300">
+              Agendamentos, respostas automáticas e estratégias para crescimento de perfis comerciais.
+            </p>
+          </div>
+          <div class="glass p-6 animate-fade-in">
+            <h4 class="text-xl font-semibold mb-2">Sistemas Web sob medida</h4>
+            <p class="text-gray-300">
+              Criação de sistemas simples para controle financeiro, atendimento ou gestão interna de pequenas empresas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="px-6 py-20 bg-transparent">
+      <div class="max-w-4xl mx-auto glass p-8 animate-fade-in">
+        <h3 class="text-2xl font-bold mb-6 text-center">Serviços</h3>
+        <ul class="text-gray-300 space-y-4 text-lg">
+          <li>✅ Criação de Chatbots para WhatsApp</li>
+          <li>✅ Landing Pages Profissionais</li>
+          <li>✅ Automações para redes sociais</li>
+          <li>✅ Integrações com n8n, APIs e ferramentas de marketing</li>
+          <li>✅ Consultoria em marketing digital estratégico</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Contato -->
+    <section id="contato" class="px-6 py-20 bg-transparent">
+      <div class="max-w-3xl mx-auto glass p-8 text-center animate-fade-in">
+        <h3 class="text-2xl font-bold mb-4">Entre em Contato</h3>
+        <p class="text-gray-300 mb-6">Quer trabalhar comigo ou tirar dúvidas? Me chama no WhatsApp clicando no botão abaixo!</p>
+        <a href="https://wa.me/5513981213016" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-full shadow hover:scale-105 transition inline-block">
+          📱 Conversar agora
+        </a>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center text-gray-500 text-sm py-10 px-4">
+      <p>© 2025 André Dowbor. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Animações básicas -->
+    <script>
+      document.querySelectorAll('.animate-fade-in').forEach((el, i) => {
+        el.style.opacity = 0;
+        setTimeout(() => {
+          el.style.transition = "opacity 1s ease";
+          el.style.opacity = 1;
+        }, i * 300);
+      });
+    </script>
+  </body>
+</html>
